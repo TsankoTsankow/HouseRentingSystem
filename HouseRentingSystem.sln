@@ -3,11 +3,13 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32929.385
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem", "HouseRentingSystem\HouseRentingSystem.csproj", "{030D2FA4-285F-4FF2-9620-C6933591430C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem", "HouseRentingSystem\HouseRentingSystem.csproj", "{030D2FA4-285F-4FF2-9620-C6933591430C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.Infrastructure", "HouseRentingSystem.Infrastructure\HouseRentingSystem.Infrastructure.csproj", "{E0B12909-6E3D-4C9A-98C6-1D53D6C19CBB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem.Infrastructure", "HouseRentingSystem.Infrastructure\HouseRentingSystem.Infrastructure.csproj", "{E0B12909-6E3D-4C9A-98C6-1D53D6C19CBB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.Core", "HouseRentingSystem.Core\HouseRentingSystem.Core.csproj", "{C90A62F5-FA6C-4BE4-82E0-1045A8399A18}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem.Core", "HouseRentingSystem.Core\HouseRentingSystem.Core.csproj", "{C90A62F5-FA6C-4BE4-82E0-1045A8399A18}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.UnitTests", "HouseRentingSystem.UnitTests\HouseRentingSystem.UnitTests.csproj", "{5AA2DB0D-F585-4D4A-9E4D-956348739755}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -27,6 +29,10 @@ Global
 		{C90A62F5-FA6C-4BE4-82E0-1045A8399A18}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C90A62F5-FA6C-4BE4-82E0-1045A8399A18}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C90A62F5-FA6C-4BE4-82E0-1045A8399A18}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5AA2DB0D-F585-4D4A-9E4D-956348739755}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5AA2DB0D-F585-4D4A-9E4D-956348739755}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5AA2DB0D-F585-4D4A-9E4D-956348739755}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5AA2DB0D-F585-4D4A-9E4D-956348739755}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
