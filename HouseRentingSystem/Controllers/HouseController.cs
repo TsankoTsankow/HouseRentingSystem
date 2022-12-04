@@ -12,13 +12,16 @@ namespace HouseRentingSystem.Controllers
     {
         private readonly IHouseService houseService;
         private readonly IAgentService agentService;
+        private readonly ILogger logger;
 
         public HouseController(
             IHouseService _houseService, 
-            IAgentService _agentService)
+            IAgentService _agentService,
+            ILogger<HouseController> _logger)
         {
             this.houseService = _houseService;
             this.agentService = _agentService;
+            this.logger = _logger;
         }
 
         [AllowAnonymous]
@@ -122,6 +125,7 @@ namespace HouseRentingSystem.Controllers
 
             if ((await houseService.HasAgentWithId(id, User.Id())) == false)
             {
+                logger.LogInformation("User with ID {0} attempted to edit other agents' house", User.Id());
                 return RedirectToPage("/Account/AccessDenied", new { area = "Identity" });
             }
 

@@ -3,6 +3,7 @@ using HouseRentingSystem.Core.Exceptions;
 using HouseRentingSystem.Core.Models.House;
 using HouseRentingSystem.Infrastructure.Data;
 using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.Logging;
 
 namespace HouseRentingSystem.Core.Services
 {
@@ -10,13 +11,16 @@ namespace HouseRentingSystem.Core.Services
     {
         private readonly ApplicationDbContext context;
         private readonly IGuard guard;
+        private readonly ILogger logger;
 
         public HouseService(
             ApplicationDbContext _context,
-            IGuard _guard)
+            IGuard _guard,
+            ILogger<HouseService> _logger)
         {
             this.context = _context;
             this.guard = _guard;
+            this.logger = _logger;
         }
 
         public async Task<HousesQueryModel> All(string? category = null, string? searchTerm = null, HouseSorting sorting = HouseSorting.Newest, int currentPage = 1, int housesPerPage = 1)
@@ -142,9 +146,17 @@ namespace HouseRentingSystem.Core.Services
                 AgentId = agentId
             };
 
-            await context.AddAsync(house);
-            await context.SaveChangesAsync();
-
+            try
+            {
+                await context.AddAsync(house);
+                await context.SaveChangesAsync();
+            }
+            catch (Exception ex)
+            {
+                logger.LogError(ex, "Database failure, failed to saved the info in Create method");
+                throw new ApplicationException("Database failed to save info", ex);
+            }
+            
             return house.Id;
         }
 
