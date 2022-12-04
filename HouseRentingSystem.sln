@@ -9,7 +9,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem.Infrastr
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem.Core", "HouseRentingSystem.Core\HouseRentingSystem.Core.csproj", "{C90A62F5-FA6C-4BE4-82E0-1045A8399A18}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.UnitTests", "HouseRentingSystem.UnitTests\HouseRentingSystem.UnitTests.csproj", "{5AA2DB0D-F585-4D4A-9E4D-956348739755}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HouseRentingSystem.UnitTests", "HouseRentingSystem.UnitTests\HouseRentingSystem.UnitTests.csproj", "{5AA2DB0D-F585-4D4A-9E4D-956348739755}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HouseRentingSystem.WebApi", "HouseRentingSystem.WebApi\HouseRentingSystem.WebApi.csproj", "{BBE5A176-8EFA-4FBC-9335-7A41A56B8A72}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,6 +35,10 @@ Global
 		{5AA2DB0D-F585-4D4A-9E4D-956348739755}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AA2DB0D-F585-4D4A-9E4D-956348739755}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5AA2DB0D-F585-4D4A-9E4D-956348739755}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BBE5A176-8EFA-4FBC-9335-7A41A56B8A72}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BBE5A176-8EFA-4FBC-9335-7A41A56B8A72}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BBE5A176-8EFA-4FBC-9335-7A41A56B8A72}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BBE5A176-8EFA-4FBC-9335-7A41A56B8A72}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
