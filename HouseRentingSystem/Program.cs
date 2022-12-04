@@ -2,6 +2,7 @@ using HouseRentingSystem.Infrastructure.Data;
 using HouseRentingSystem.ModelBinders;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.CodeAnalysis.Host.Mef;
 using Microsoft.EntityFrameworkCore;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -21,6 +22,7 @@ builder.Services.AddDefaultIdentity<IdentityUser>(options =>
     options.Password.RequiredLength = builder.Configuration.GetValue<int>("Identity:RequiredLength");
 
 })
+    .AddRoles<IdentityRole>()
     .AddEntityFrameworkStores<ApplicationDbContext>();
 builder.Services.AddControllersWithViews().AddMvcOptions(options =>
 {
@@ -28,6 +30,7 @@ builder.Services.AddControllersWithViews().AddMvcOptions(options =>
     options.ModelBinderProviders.Insert(0, new DecimalModelBinderProvider());
 });
 builder.Services.AddApplicationServices();
+
 
 var app = builder.Build();
 
@@ -56,10 +59,10 @@ app.MapControllerRoute(
 
 app.UseEndpoints(endpoints =>
 {
-    endpoints.MapControllerRoute(
-      name: "areas",
-      pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
-    );
+    //endpoints.MapControllerRoute(
+    //  name: "areas",
+    //  pattern: "{area:exists}/{controller=Home}/{action=Index}/{id?}"
+    //);
 
     endpoints.MapControllerRoute(
       name: "houseDetails",

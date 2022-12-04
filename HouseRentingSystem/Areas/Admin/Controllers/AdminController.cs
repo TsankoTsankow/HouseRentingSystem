@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace HouseRentingSystem.Areas.Admin.Controllers
 {
-    [Authorize(Roles = "Administrator")]
-    public class AdminController : Controller
+    
+    public class AdminController : BaseController
     {
         public IActionResult Index()
         {
